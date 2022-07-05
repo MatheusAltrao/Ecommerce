@@ -15,3 +15,16 @@ bar && bar.addEventListener('click', () => nav.classList.add('active'))
 } */
 
 close && close.addEventListener('click', () => nav.classList.remove('active'))
+
+const backToTopButton = document.querySelector('.back-to-top')
+function backToTop() {
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+window.addEventListener('scroll', function () {
+  backToTop()
+})
