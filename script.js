@@ -16,7 +16,12 @@ bar && bar.addEventListener('click', () => nav.classList.add('active'))
 
 close && close.addEventListener('click', () => nav.classList.remove('active'))
 
+window.addEventListener('scroll', function () {
+  backToTop()
+})
+
 const backToTopButton = document.querySelector('.back-to-top')
+
 function backToTop() {
   if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
@@ -24,7 +29,3 @@ function backToTop() {
     backToTopButton.classList.remove('show')
   }
 }
-
-window.addEventListener('scroll', function () {
-  backToTop()
-})
